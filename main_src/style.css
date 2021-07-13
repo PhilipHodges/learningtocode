@@ -1,0 +1,79 @@
+html {
+    background: rgb(0, 0, 0);
+}
+
+#main {
+    height: 70vh;
+    width: 100%;
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10rem
+}
+.input {
+    width: 7rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 1rem 2rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: .5rem;
+}
+
+.box img {
+    width: 100px;
+}
+
+.box-anim {
+    /* Animation */
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    /* transform-origin: top left; */
+}
+
+.fadeout {
+    /* Animation */
+    animation: fade 900ms normal forwards ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
